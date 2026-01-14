@@ -66,10 +66,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-.botao-azul {
-  background-color: #008cba;
-  color: #ffffff;
-  padding: 15px;
-  border-radius: 5px;
-}
