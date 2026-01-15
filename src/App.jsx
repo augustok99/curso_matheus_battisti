@@ -9,6 +9,8 @@ import Contador from "./components/Contador";
 import DisplayWindowSize from "./components/DisplayWindowSize";
 import Container from "./components/Container";
 import PerfilDeUsuario from "./components/PerfilDeUsuario";
+import CalculoPesado from "./components/CalculoPesado";
+import ContadorCallback from "./components/ContadorCallback";
 
 function App() {
   return (
@@ -36,6 +38,9 @@ function App() {
       {/* props => componente => chamada de API => resulta em um dado  */}
       <PerfilDeUsuario usuarioId={1} />
       <PerfilDeUsuario usuarioId={2} />
+      {/* 8.7 - useMemo e useCallback */}
+      <CalculoPesado numero={5} />
+      <ContadorCallback />
     </>
   );
 }
