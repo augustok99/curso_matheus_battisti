@@ -1,0 +1,29 @@
+import React from "react";
+import { useState } from "react";
+
+const TaskInput = ({ onAddTask }) => {
+  // Props para receber a função de adicionar tarefa
+  const [input, setInput] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (input.trim()) {
+      onAddTask(input);
+      setInput("");
+    }
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Adicione uma nova tarefa"
+      />
+      <button type="submit">Adicionar</button>
+    </form>
+  );
+};
+
+export default TaskInput;
